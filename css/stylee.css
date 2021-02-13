@@ -26,6 +26,9 @@ header {
     width: 100%;
     height: 65px;
     background-color: #161C35;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 .header__wrap {
@@ -186,6 +189,8 @@ header {
     padding-bottom: 30px;
     width: 100%;
     text-align: center;
+    position: relative;
+    z-index: 2;
 }
 
 
@@ -274,4 +279,103 @@ header {
 .service_btn a:hover {
     background: #161C35;
     color: white;
+}
+
+.section__page {
+    padding: 60px 0;
+    background: url(../images/banner-bg.jpg);
+    height: 555px;
+    background-size: cover;
+    position: relative;
+}
+
+.section__page::after {
+    content: "";
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    background-color: rgba(33, 42, 73, 0.6);
+}
+
+.service__service-text-white {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 40px;
+    color: white;
+    display: inline-block;
+    padding: 0 auto;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.service__service-text-white::after {
+    content: "";
+    height: 2px;
+    background: white;
+    width: 40%;
+    margin-left: -20%;
+    left: 50%;
+    top: 120%;
+    position: absolute;
+}
+
+.page__item-wrap {
+    margin: 0 auto;
+    width: 1170px;
+    display: flex;
+    padding: 0 15px;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.page__item-left {
+    width: 60%;
+}
+
+.page__item-wrap img {
+    margin: 0 auto;
+}
+
+.page__title {
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+    padding-bottom: 30px;
+}
+
+.page__descr {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 24px;
+    color: #FFFFFF;
+    padding-bottom: 30px;
+}
+
+.page__list {
+    list-style: none;
+}
+
+.page__list li {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 24px;
+    color: #FFFFFF;
+    padding-bottom: 22px;
+    position: relative;
+    padding-left: 22px;
+}
+
+.page__list li::before {
+    content: '\f105';
+    position: absolute;
+    left: 0;
+    font-family: fontawesome;
+    color: #00D5C3;
 }
